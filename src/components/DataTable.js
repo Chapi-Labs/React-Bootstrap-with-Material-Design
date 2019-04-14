@@ -16,7 +16,7 @@ class DataTable extends Component {
       entries: props.entries,
       filteredRows: props.data.rows || [],
       pages: [],
-      rows: props.data.rows || [],
+      rows: props.data.rows.filter(r => props.data.columns.some(c => r[c.field] !== undefined)) || [],
       search: '',
       translateScrollHead: 0,
       order: props.order || []
