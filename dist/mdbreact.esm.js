@@ -1300,11 +1300,7 @@ function (_Component) {
       entries: props.entries,
       filteredRows: props.data.rows || [],
       pages: [],
-      rows: props.data.rows.filter(function (r) {
-        return props.data.columns.some(function (c) {
-          return r[c.field] !== undefined;
-        });
-      }) || [],
+      rows: props.data.rows || [],
       search: '',
       translateScrollHead: 0,
       order: props.order || []
