@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 class Fa extends React.Component {
   render() {
@@ -32,7 +33,7 @@ class Fa extends React.Component {
     const classes = classNames(
       iconPrefix,
       list ? "fa-li" : false,
-      icon ? `fa-${icon}` : false,
+      icon ? `${icon}` : false,
       size ? `fa-${size}` : false,
       fixed ? "fa-fw" : false,
       pull ? `fa-pull-${pull}` : false,
@@ -46,7 +47,7 @@ class Fa extends React.Component {
       className
     );
 
-    return <i {...attributes} className={classes} />;
+    return <FontAwesomeIcon {...attributes} className={classes} />;
   }
 }
 
