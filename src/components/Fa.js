@@ -14,7 +14,6 @@ class Fa extends React.Component {
       far,
       fixed,
       flip,
-      icon,
       inverse,
       light,
       list,
@@ -33,7 +32,6 @@ class Fa extends React.Component {
     const classes = classNames(
       iconPrefix,
       list ? "fa-li" : false,
-      icon ? `${icon}` : false,
       size ? `fa-${size}` : false,
       fixed ? "fa-fw" : false,
       pull ? `fa-pull-${pull}` : false,
