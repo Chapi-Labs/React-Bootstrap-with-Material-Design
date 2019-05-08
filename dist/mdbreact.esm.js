@@ -1242,7 +1242,7 @@ function (_Component) {
 
               if (stringValue != null) {
                 if (typeof stringValue == 'number') stringValue = String(stringValue);
-                return stringValue.toLowerCase().match(_this.state.search.toLowerCase());
+                if (stringValue.toLowerCase().match(_this.state.search.toLowerCase())) return true;
               }
             }
           }

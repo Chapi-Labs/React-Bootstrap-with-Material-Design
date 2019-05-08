@@ -134,9 +134,12 @@ class DataTable extends Component {
               }
               if (stringValue != null) {
                 if (typeof stringValue == 'number') stringValue = String(stringValue);
-                return stringValue
+                if (
+                  stringValue
                     .toLowerCase()
                     .match(this.state.search.toLowerCase())
+                )
+                  return true;
               }
             }
           }
