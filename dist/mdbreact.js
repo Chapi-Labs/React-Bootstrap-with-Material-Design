@@ -1247,7 +1247,9 @@ function (_Component) {
                 stringValue = _typeof(row[key]) === 'object' ? row[key].props.value : row[key].toString();
               }
 
-              if (stringValue.toLowerCase().match(_this.state.search.toLowerCase())) return true;
+              if (stringValue != null) {
+                if (stringValue.toLowerCase().match(_this.state.search.toLowerCase())) return true;
+              }
             }
           }
 

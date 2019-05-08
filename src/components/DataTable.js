@@ -132,10 +132,14 @@ class DataTable extends Component {
               if (row[key] !== null) {
                 stringValue = typeof row[key] === 'object' ? row[key].props.value : row[key].toString();
               }
-              if (
-                stringValue.toLowerCase().match(this.state.search.toLowerCase())
-              )
-                return true;
+              if (stringValue != null) {
+                if (
+                  stringValue
+                    .toLowerCase()
+                    .match(this.state.search.toLowerCase())
+                )
+                  return true;
+              }
             }
           }
           return false;
